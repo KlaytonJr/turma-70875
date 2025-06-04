@@ -1,0 +1,9 @@
+h1 {
+    color: red;
+}
+
+ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
