@@ -544,65 +544,130 @@
 // //Método: Converter para maiúscula.
 // console.log(texto.toUpperCase());
 
-const lista = ["Melancia", "Macarrão", "Pizza", "Hamburguer"];
+// const lista = ["Melancia", "Macarrão", "Pizza", "Hamburguer"];
 
-console.log(lista);
-console.log(lista.length);
+// console.log(lista);
+// console.log(lista.length);
 
-for (let index = 0; index < lista.length; index++) {
-  console.log("index -> ", index);
-  console.log(lista[index]);
+// for (let index = 0; index < lista.length; index++) {
+//   console.log("index -> ", index);
+//   console.log(lista[index]);
+// }
+
+// lista.push("Salada");
+// lista.unshift("Morango");
+// console.log(lista);
+
+// lista.pop();
+// lista.shift();
+
+// console.log(lista);
+
+// console.log(lista.join(","));
+
+// const reversa = [...lista, "Hotpocket"];
+
+// reversa.reverse();
+
+// console.log(lista);
+// console.log(reversa);
+
+// const produtos = [
+//   {
+//     nome: "Camisa",
+//     preco: 150,
+//     tamanhos: ["P", "M", "G", "GG"],
+//     setor: {
+//       endereco: "Rua tal",
+//       galpao: 32,
+//       corredor: 5,
+//     },
+//   },
+//   {
+//     nome: "Bermuda",
+//     preco: 150,
+//     tamanhos: ["P", "M", "G"],
+//   },
+//   {
+//     nome: "Calça",
+//     preco: 150,
+//     tamanhos: ["G", "GG"],
+//   },
+// ];
+
+// console.log(produtos[0].nome);
+// console.log(produtos[0].setor.endereco);
+// console.log(produtos[0].tamanhos[1]);
+
+// for (const produto of produtos) {
+//   console.log(produto.preco, produto.nome);
+// }
+
+// for (const item of lista) {
+//   console.log(item);
+// }
+
+// class Carro {
+//   constructor(marca, modelo, ano) {
+//     this.marca = marca;
+//     this.modelo = modelo;
+//     this.ano = ano;
+//   }
+
+//   // Método da classe
+//   exibirInfo() {
+//     return `${this.marca} ${this.modelo}, Ano: ${this.ano}`;
+//   }
+// }
+
+// const carro1 = new Carro("Toyota", "Corolla", 2022);
+// console.log(carro1.exibirInfo()); // "Toyota Corolla, Ano: 2022"
+
+// class Ferrari extends Carro {
+//   constructor(marca, modelo, ano, preco) {
+//     super(marca, modelo, ano);
+//     this.preco = preco;
+//   }
+// }
+
+// const ferrari = new Ferrari("Spider", "Ferrari", 2025, 1000);
+// console.log(ferrari);
+// console.log(ferrari.exibirInfo());
+
+function Carro(nome, ano) {
+  this.nome = nome;
+  this.ano = ano;
 }
 
-lista.push("Salada");
-lista.unshift("Morango");
-console.log(lista);
+const carro = new Carro("Ferrari", 2024);
+console.log(carro);
 
-lista.pop();
-lista.shift();
+class ContaBancaria {
+  constructor(titular) {
+    this.titular = titular;
+    this.saldo = 0;
+  }
 
-console.log(lista);
+  depositar(valor) {
+    // this.saldo = this.saldo + valor;
+    this.saldo += valor;
+  }
 
-console.log(lista.join(","));
+  sacar(valor) {
+    this.saldo -= valor;
+  }
 
-const reversa = [...lista, "Hotpocket"];
-
-reversa.reverse();
-
-console.log(lista);
-console.log(reversa);
-
-const produtos = [
-  {
-    nome: "Camisa",
-    preco: 150,
-    tamanhos: ["P", "M", "G", "GG"],
-    setor: {
-      endereco: "Rua tal",
-      galpao: 32,
-      corredor: 5,
-    },
-  },
-  {
-    nome: "Bermuda",
-    preco: 150,
-    tamanhos: ["P", "M", "G"],
-  },
-  {
-    nome: "Calça",
-    preco: 150,
-    tamanhos: ["G", "GG"],
-  },
-];
-
-console.log(produtos[0].nome);
-console.log(produtos[0].setor.endereco);
-console.log(produtos[0].tamanhos[1]);
-
-for (const produto of produtos) {
-  console.log(produto.preco, produto.nome);
+  extrato() {
+    return `Olá ${this.titular}, seu saldo é R$ ${this.saldo}`;
+  }
 }
 
-for (const item of lista) {
-  console.log(item);
-}
+const conta1 = new ContaBancaria("Klayton");
+conta1.depositar(150);
+conta1.depositar(100);
+console.log(conta1.extrato());
+
+conta1.saldo = 50;
+
+conta1.sacar(50);
+console.log(conta1.extrato());

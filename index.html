@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aula 1</title>
     <link rel="stylesheet" href="./style.css" />
 
@@ -10,18 +10,27 @@
     <!-- <script src="./script.js" async defer></script> -->
     <!-- async -> inicia quando passa, mas não impede o carregamento do conteudo -->
     <!-- defer -> carrega só depois do conteúdo -->
-</head>
-<body>
+  </head>
+  <body>
     <h1>Aula 1</h1>
 
     <ul>
-        <li>Home</li>
-        <li>Sobre</li>
-        <li>Contato</li>
+      <li>Home</li>
+      <li>Sobre</li>
+      <li>Contato</li>
     </ul>
 
+    <input id="inputField" type="text" placeholder="Digite um produto" />
+
+    <button id="addBtn">Adicionar</button>
+    <button id="viewBtn">Visualizar</button>
+    <button id="cleanBtn">Limpar</button>
+
+    <ul id="listItems"></ul>
+
     <!-- Conteúdo é mais importante que o script -->
-    <script src="./script.js" ></script>
+    <script src="./script.js"></script>
+    <script src="./products.js"></script>
 
     <!-- <script>
         var numeroA = 1;
@@ -46,5 +55,5 @@
 
         console.log("resultadoSomaMaisSubtracao -> " + resultadoSomaMaisSubtracao)
     </script> -->
-</body>
+  </body>
 </html>
