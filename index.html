@@ -14,19 +14,36 @@
   <body>
     <h1>Aula 1</h1>
 
-    <ul>
-      <li>Home</li>
-      <li>Sobre</li>
-      <li>Contato</li>
+    <ul id="navbar">
+      <li class="nav-item active" id="nav-home">Home</li>
+      <li class="nav-item">Sobre</li>
+      <li class="nav-item">Contato</li>
     </ul>
 
     <input id="inputField" type="text" placeholder="Digite um produto" />
 
-    <button id="addBtn">Adicionar</button>
+    <button id="addBtn" onclick="addItem()">Adicionar</button>
     <button id="viewBtn">Visualizar</button>
     <button id="cleanBtn">Limpar</button>
 
-    <ul id="listItems"></ul>
+    <ul id="listItems">
+      <li class="active">Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <input id="inputName" type="text" placeholder="Digite seu nome" />
+
+    <button onclick="mostrarNome()">Mostrar nome</button>
+
+    <ul id="pessoas"></ul>
+
+    <button id="botao">Clique Aqui</button>
+    <div id="popup" class="popup">
+      <p>Atenção! Site em manutenção</p>
+    </div>
+
+    <ul id="posts"></ul>
 
     <!-- Conteúdo é mais importante que o script -->
     <script src="./script.js"></script>

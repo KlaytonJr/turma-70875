@@ -1,9 +1,23 @@
 h1 {
-    color: red;
+  color: red;
 }
 
 ul {
-    display: flex;
-    gap: 15px;
-    list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+}
+
+.popup {
+  display: none;
+  width: 250px;
+  height: 50px;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  background-color: burlywood;
+}
+.popup-active {
+  display: block;
 }
